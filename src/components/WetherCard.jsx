@@ -1,8 +1,21 @@
 import React from "react";
 import {ListGroupItem,Card ,ListGroup} from 'react-bootstrap'
+import {useDispatch,useSelector} from "react-redux";
 import snow from '../assets/img/snow.gif'
+import {Button} from "react-bootstrap";
+import {fetchWeather} from '../redux/action'
+
+
 
 function WeatherCard() {
+    const dispatch = useDispatch()
+    const temperature = useSelector(state =>
+        state.currentHomeWeather
+    )
+    // if (!posts.length) {
+    //     return <button  onClick={() => dispatch(fetchPosts())} className='btn-success btn'>Download posts</button>
+    // }
+    // return posts.map(el =><Post post = {el} key = {el.id}/>)
 
     return (
         <>
@@ -20,6 +33,9 @@ function WeatherCard() {
                     <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
                     <ListGroupItem>Vestibulum at eros</ListGroupItem>
                 </ListGroup>
+                <Button onClick={()=> dispatch(fetchWeather())} >
+                    get Weather
+                </Button>
                 <Card.Body>
                     <Card.Link href="#">Card Link</Card.Link>
                     <Card.Link href="#">Another Link</Card.Link>
