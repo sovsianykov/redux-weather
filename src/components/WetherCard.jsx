@@ -1,45 +1,49 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {ListGroupItem,Card ,ListGroup} from 'react-bootstrap'
 import {useDispatch,useSelector} from "react-redux";
 import snow from '../assets/img/snow.gif'
 import {Button} from "react-bootstrap";
+import InputCity from "./InputCity";
+
+
 import {fetchWeather} from '../redux/action'
+// import {fetchWeather2} from '../redux/action'
+import store from  '../App'
 
 
 
 function WeatherCard() {
+    const picture = document.querySelector('.pic')
     const dispatch = useDispatch()
     const temperature = useSelector(state =>
-        state.currentHomeWeather
-    )
-    // if (!posts.length) {
-    //     return <button  onClick={() => dispatch(fetchPosts())} className='btn-success btn'>Download posts</button>
-    // }
-    // return posts.map(el =><Post post = {el} key = {el.id}/>)
+        state.homeWeatherReducer.currentHomeWeather.temp)
+    const fills_like = useSelector(state =>
+        state.homeWeatherReducer.currentHomeWeather.feels_like)
+    const precip = useSelector(state =>
+        state.homeWeatherReducer.currentHomePrecipitation.main)
+    useEffect( ()=> dispatch(fetchWeather()),[])
 
     return (
         <>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={snow} />
+            <Card style={{ maxWidthidth: '20rem' }}>
+                <Card.Body className='pic'  />
+                <Card.Header>
+                    <InputCity/>
+
+                </Card.Header>
                 <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
+
+                    <Card.Title>Vishneve</Card.Title>
                     <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
+                        Current air T
                     </Card.Text>
+                    <h2>{temperature}</h2>
                 </Card.Body>
                 <ListGroup className="list-group-flush">
-                    <ListGroupItem>Cras justo odio</ListGroupItem>
-                    <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-                    <ListGroupItem>Vestibulum at eros</ListGroupItem>
+                    <ListGroupItem>FILLS LIKE </ListGroupItem>
+                    <h2>{fills_like}</h2>
+                    <h2>{precip}</h2>
                 </ListGroup>
-                <Button onClick={()=> dispatch(fetchWeather())} >
-                    get Weather
-                </Button>
-                <Card.Body>
-                    <Card.Link href="#">Card Link</Card.Link>
-                    <Card.Link href="#">Another Link</Card.Link>
-                </Card.Body>
             </Card>
 
 

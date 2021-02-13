@@ -7,9 +7,6 @@ function Home() {
       <>
           <div className='container justify-content-center d-md-flex' >
               <WeatherCard/>
-              <div><p>{Date()}</p></div>
-
-
           </div>
 
       </>
