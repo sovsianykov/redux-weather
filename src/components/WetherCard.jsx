@@ -17,7 +17,7 @@ function WeatherCard() {
 
   return (
     <>
-      <Card className="weathercard" style={{ width: "20rem" }}>
+      <Card className="weathercard"  >
         <Card.Body />
         <Card.Body>
           <h1>Kiev Metro WEATHER</h1>
