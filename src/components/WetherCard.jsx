@@ -25,7 +25,7 @@ function WeatherCard() {
 
     return (
         <>
-            <Card style={{ maxWidthidth: '20rem' }}>
+            <Card className='weathercard' style={{ maxWidthidth: '20rem' }}>
                 <Card.Body className='pic'  />
                 <Card.Header>
                     <InputCity/>
@@ -33,15 +33,18 @@ function WeatherCard() {
                 </Card.Header>
                 <Card.Body>
 
-                    <Card.Title>Vishneve</Card.Title>
+                    {/*<Card.Title>Vishneve</Card.Title>*/}
                     <Card.Text>
-                        Current air T
+                        Current air t
                     </Card.Text>
-                    <h2>{temperature}</h2>
+                    <h2>{temperature} </h2>
                 </Card.Body>
                 <ListGroup className="list-group-flush">
-                    <ListGroupItem>FILLS LIKE </ListGroupItem>
-                    <h2>{fills_like}</h2>
+                    <Card.Text>
+                        FILLS LIKE
+                    </Card.Text>
+                    {/*<ListGroupItem>FILLS LIKE </ListGroupItem>*/}
+                    <h2>{fills_like} </h2>
                     <h2>{precip}</h2>
                 </ListGroup>
             </Card>
