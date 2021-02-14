@@ -3,7 +3,7 @@ import {ListGroupItem,Card ,ListGroup} from 'react-bootstrap'
 import {useDispatch,useSelector} from "react-redux";
 import snow from '../assets/img/snow.gif'
 import {Button} from "react-bootstrap";
-import InputCity from "./InputCity";
+import InputStation from "./InputStation";
 
 
 import {fetchWeather} from '../redux/action'
@@ -21,14 +21,14 @@ function WeatherCard() {
         state.homeWeatherReducer.currentHomeWeather.feels_like)
     const precip = useSelector(state =>
         state.homeWeatherReducer.currentHomePrecipitation.main)
-    useEffect( ()=> dispatch(fetchWeather()),[])
+
 
     return (
         <>
             <Card className='weathercard' style={{ maxWidthidth: '20rem' }}>
                 <Card.Body className='pic'  />
                 <Card.Header>
-                    <InputCity/>
+                    <InputStation/>
 
                 </Card.Header>
                 <Card.Body>
