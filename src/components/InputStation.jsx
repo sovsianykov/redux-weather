@@ -37,7 +37,7 @@ export default function InputStation() {
           "https://api.openweathermap.org/data/2.5/weather?lat=50.37961&lon=30.36742&appid=d409c3b0705292f3d52ab9675afd8d8e&units=metric"
         )
       ),
-    []
+
   );
 
   return (
