@@ -1,9 +1,6 @@
-import { homeWeatherReducer } from  './homeWeatherReducer'
-import {combineReducers} from "redux";
+import { homeWeatherReducer } from "./homeWeatherReducer";
+import { combineReducers } from "redux";
 
-export const rootReducer = combineReducers(
-    {
-        homeWeatherReducer : homeWeatherReducer
-    })
-
-
+export const rootReducer = combineReducers({
+  homeWeatherReducer: homeWeatherReducer,
+});

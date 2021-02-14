@@ -1,57 +1,37 @@
-import React, {useEffect} from "react";
-import {ListGroupItem,Card ,ListGroup} from 'react-bootstrap'
-import {useDispatch,useSelector} from "react-redux";
-import snow from '../assets/img/snow.gif'
-import {Button} from "react-bootstrap";
+import React from "react";
+import { Card, ListGroup } from "react-bootstrap";
+import { useSelector } from "react-redux";
+
 import InputStation from "./InputStation";
 
-
-import {fetchWeather} from '../redux/action'
-// import {fetchWeather2} from '../redux/action'
-import store from  '../App'
-
-
-
 function WeatherCard() {
-    const picture = document.querySelector('.pic')
-    const dispatch = useDispatch()
-    const temperature = useSelector(state =>
-        state.homeWeatherReducer.currentHomeWeather.temp)
-    const fills_like = useSelector(state =>
-        state.homeWeatherReducer.currentHomeWeather.feels_like)
-    const precip = useSelector(state =>
-        state.homeWeatherReducer.currentHomePrecipitation.main)
+  const temperature = useSelector(
+    (state) => state.homeWeatherReducer.currentHomeWeather.temp
+  );
+  const fills_like = useSelector(
+    (state) => state.homeWeatherReducer.currentHomeWeather.feels_like
+  );
+  const precip = useSelector(
+    (state) => state.homeWeatherReducer.currentHomePrecipitation.main
+  );
 
-
-    return (
-        <>
-            <Card className='weathercard' style={{ maxWidthidth: '20rem' }}>
-                <Card.Body className='pic'  />
-                <Card.Header>
-                    <InputStation/>
-
-                </Card.Header>
-                <Card.Body>
-
-                    {/*<Card.Title>Vishneve</Card.Title>*/}
-                    <Card.Text>
-                        Current air t
-                    </Card.Text>
-                    <h2>{temperature} </h2>
-                </Card.Body>
-                <ListGroup className="list-group-flush">
-                    <Card.Text>
-                        FILLS LIKE
-                    </Card.Text>
-                    {/*<ListGroupItem>FILLS LIKE </ListGroupItem>*/}
-                    <h2>{fills_like} </h2>
-                    <h2>{precip}</h2>
-                </ListGroup>
-            </Card>
-
-
-        </>
-    )
-
+  return (
+    <>
+      <Card className="weathercard" style={{ width: "20rem" }}>
+        <Card.Body />
+        <Card.Body>
+          <h1>Kiev Metro WEATHER</h1>
+          <Card.Text>Current air t</Card.Text>
+          <h2>{temperature} </h2>
+        </Card.Body>
+        <ListGroup className="list-group-flush">
+          <Card.Text>FILLS LIKE</Card.Text>
+          <h2>{fills_like} </h2>
+          <h2>{precip}</h2>
+        </ListGroup>
+        <InputStation />
+      </Card>
+    </>
+  );
 }
 export default WeatherCard;
