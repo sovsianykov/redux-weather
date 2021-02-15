@@ -1,6 +1,9 @@
 body {
   margin: 0;
-  background: #0d3d94;
+  padding: 0;
+  box-sizing: border-box;
+  background: #132247;
+  overflow: hidden;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -13,6 +16,7 @@ code {
     monospace;
 }
 .weathercard {
+  width: 300px ;
   margin-top: 20px;
   padding-top: 20px;
   background: url("./assets/img/snow.gif")no-repeat center center/cover ;
@@ -44,4 +48,25 @@ code {
 
   }
 
+}
+@media (max-width: 470px) {
+
+.weathercard {
+  body {
+    background: #102324;
+  }
+  //background: url("./assets/img/snow.4.jpg")no-repeat center center/cover ;
+   color: white;
+  text-shadow: 0 0 10px #0f151a;
+
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+
+
+  width: 100%;
+  height: 100vh;
+}
+  
 }

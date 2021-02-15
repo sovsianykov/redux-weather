@@ -17,11 +17,11 @@ function WeatherCard() {
 
   return (
     <>
-      <Card className="weathercard" style={{ width: "20rem" }}>
+      <Card className="weathercard"  >
         <Card.Body />
         <Card.Body>
           <h1>Kiev Metro WEATHER</h1>
-          <Card.Text>Current air t</Card.Text>
+          <Card.Text>Current air T</Card.Text>
           <h2>{temperature} </h2>
         </Card.Body>
         <ListGroup className="list-group-flush">

@@ -1,5 +1,5 @@
 import {GET_HOME_WEATHER, GET_PRECIPITATION_WEATHER, GET_TOMORROW_WEATHER} from "./types";
-import store from '../App'
+
 
 
 export function fetchWeather(selectedUrl ) {
