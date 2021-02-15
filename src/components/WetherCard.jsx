@@ -1,5 +1,4 @@
 import React from "react";
-import { Card, ListGroup } from "react-bootstrap";
 import { useSelector } from "react-redux";
 
 import InputStation from "./InputStation";
@@ -17,20 +16,15 @@ function WeatherCard() {
 
   return (
     <>
-      <Card className="weathercard"  >
-        <Card.Body />
-        <Card.Body>
+      <div className="weathercard"  >
           <h1>Kiev Metro WEATHER</h1>
-          <Card.Text>Current air T</Card.Text>
+          <h3>Current air T</h3>
           <h2>{temperature} </h2>
-        </Card.Body>
-        <ListGroup className="list-group-flush">
-          <Card.Text>FILLS LIKE</Card.Text>
+          <h5>FILLS LIKE</h5>
           <h2>{fills_like} </h2>
           <h2>{precip}</h2>
-        </ListGroup>
         <InputStation />
-      </Card>
+      </div>
     </>
   );
 }
