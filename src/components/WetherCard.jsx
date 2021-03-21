@@ -20,11 +20,11 @@ const useStyles = makeStyles({
     marginTop :'40px',
     fontSize: 14,
     fontWeight: 500,
-    color: 'antiquewhite'
+    color: 'blue'
   },
   pos: {
     marginBottom: 13,
-    color: 'white'
+    color: 'blue'
 
   },
 });
@@ -60,7 +60,7 @@ function WeatherCard() {
       {/*  </ListGroup>*/}
       {/*  <InputStation />*/}
       {/*</Card>*/}
-      <Card className='weathercard' variant="outlined">
+      <Card className={classes.root} variant="outlined">
         <CardContent>
           <Typography  variant='h2'   className={classes.title}  gutterBottom>
             Kiev Metro WEATHER
