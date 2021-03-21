@@ -4,7 +4,6 @@ import {GET_HOME_WEATHER, GET_PRECIPITATION_WEATHER, GET_TOMORROW_WEATHER} from 
 
 export function fetchWeather(selectedUrl ) {
 
-    // selectedUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=50.37961&lon=30.36742&appid=d409c3b0705292f3d52ab9675afd8d8e&units=metric'
     return  async dispatch =>
     {
 

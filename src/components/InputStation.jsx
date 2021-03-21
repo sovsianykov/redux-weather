@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { MetroStations } from "./StationsList";
 import { fetchWeather } from "../redux/action";
 import Option from "./Option";
+import {Box} from "@material-ui/core";
 
 export default function InputStation() {
   const dispatch = useDispatch();
@@ -37,11 +38,11 @@ export default function InputStation() {
           "https://api.openweathermap.org/data/2.5/weather?lat=50.37961&lon=30.36742&appid=d409c3b0705292f3d52ab9675afd8d8e&units=metric"
         )
       ),
-    []
+    [dispatch]
   );
 
   return (
-    <>
+    <Box>
       <Form>
         <Form.Group controlId="exampleForm.ControlSelect1">
           <Form.Control onChange={onSelectHandler} as="select">
@@ -58,6 +59,6 @@ export default function InputStation() {
           </Form.Control>
         </Form.Group>
       </Form>
-    </>
+    </Box>
   );
 }
