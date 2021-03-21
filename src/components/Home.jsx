@@ -1,14 +1,18 @@
 import React from "react";
 import WeatherCard from "./WetherCard";
-import {Box} from "@material-ui/core";
+import {Box, Grid,Paper} from "@material-ui/core";
 function Home() {
 
 
     return (
       <Box>
-          <div className='container justify-content-center d-md-flex' >
+          <Grid container justify='center'>
+              <Grid item xs={12} sm={3}>
+                  <Paper>
               <WeatherCard/>
-          </div>
+                  </Paper>
+          </Grid>
+          </Grid>
 
       </Box>
     )

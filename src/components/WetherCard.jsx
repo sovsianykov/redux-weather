@@ -18,13 +18,13 @@ const useStyles = makeStyles({
   },
   title: {
     marginTop :'40px',
-    fontSize: 14,
+    fontSize: 23,
     fontWeight: 500,
-    color: 'blue'
+    color: "darkred"
   },
   pos: {
-    marginBottom: 13,
-    color: 'blue'
+    marginBottom: 18,
+    color: 'black'
 
   },
 });
@@ -62,7 +62,7 @@ function WeatherCard() {
       {/*</Card>*/}
       <Card className={classes.root} variant="outlined">
         <CardContent>
-          <Typography  variant='h2'   className={classes.title}  gutterBottom>
+          <Typography  variant='h1'   className={classes.title}  gutterBottom>
             Kiev Metro WEATHER
           </Typography>
           <Typography variant="h5" className={classes.pos} component="h2">
